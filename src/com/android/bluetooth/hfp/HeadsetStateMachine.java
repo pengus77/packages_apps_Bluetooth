@@ -1884,7 +1884,7 @@ public class HeadsetStateMachine extends StateMachine {
                 BluetoothHeadset.VENDOR_SPECIFIC_HEADSET_EVENT_XAPL, vendorId, productId, version,
                 null, mAdapterService.getMetricId(device));
         // feature = 2 indicates that we support battery level reporting only
-        mNativeInterface.atResponseString(device, "+XAPL=iPhone," + String.valueOf(2));
+        mNativeInterface.atResponseString(device, "+XAPL=iPhone," + String.valueOf(args[1]));
     }
 
     private void processUnknownAt(String atString, BluetoothDevice device) {
